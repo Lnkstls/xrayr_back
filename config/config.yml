@@ -1,0 +1,49 @@
+ConnetionConfig:
+  BufferSize: 64
+  ConnIdle: 30
+  DownlinkOnly: 4
+  Handshake: 4
+  UplinkOnly: 2
+DnsConfigPath: null
+Log:
+  AccessPath: null
+  ErrorPath: null
+  Level: info
+Nodes:
+- ApiConfig:
+    ApiHost: "domain.com"
+    ApiKey: "key"
+    DeviceLimit: 0
+    EnableVless: false
+    EnableXTLS: false
+    NodeID: '123'
+    NodeType: V2ray
+    RuleListPath: null
+    SpeedLimit: 0
+    Timeout: 30
+  ControllerConfig:
+    CertConfig:
+      CertDomain: node1.test.com
+      CertFile: /etc/XrayR/cert/node1.test.com.cert
+      CertMode: dns
+      DNSEnv:
+        ALICLOUD_ACCESS_KEY: aaa
+        ALICLOUD_SECRET_KEY: bbb
+      Email: test@me.com
+      KeyFile: /etc/XrayR/cert/node1.test.com.key
+      Provider: alidns
+    DNSType: AsIs
+    EnableDNS: false
+    EnableFallback: false
+    EnableProxyProtocol: false
+    FallBackConfigs:
+    - Dest: 80
+      Path: null
+      ProxyProtocolVer: 0
+      SNI: null
+    ListenIP: 0.0.0.0
+    SendIP: 0.0.0.0
+    UpdatePeriodic: 60
+  PanelType: V2board
+OutboundConfigPath: null
+RouteConfigPath: null
